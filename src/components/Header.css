@@ -1,0 +1,81 @@
+.main-header {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  border-bottom: purple solid 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(235, 235, 235, 0.8);
+  color: purple;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  padding-left: 1rem;
+}
+.nav-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  background: linear-gradient(rgb(192, 39, 166), rgb(135, 45, 187));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-container {
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.header-button {
+  padding: 1rem 2rem;
+  background-color: rgb(235, 235, 235);
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button {
+  border: purple solid 2px;
+  transition: background-color 0.5s, color 0.5s;
+
+}
+
+.login-button:hover {
+  background-image: linear-gradient(rgb(192, 39, 166), rgb(135, 45, 187));
+  color: white;
+}
+
+.signup-button {
+  background-image: linear-gradient(rgb(192, 39, 166), rgb(135, 45, 187));
+  color: white;
+}
+
+.signup-button:hover {
+  background-image: linear-gradient(rgb(222, 17, 188), rgb(155, 24, 232));
+  border: purple solid 2px;
+}
+.hamburger-button{
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .nav-links-container, .button-container {
+    display: none;
+  }
+  .hamburger-button{
+    display: flex;
+    padding-right: 2rem;
+    cursor: pointer;
+  }
+}

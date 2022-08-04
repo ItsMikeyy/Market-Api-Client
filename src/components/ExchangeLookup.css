@@ -1,0 +1,33 @@
+.exchange-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 8rem auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 3rem 0;
+}
+
+.exchange-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem
+}
+.exchange-form > select {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.exchange-img {
+  width: 5%;
+}
+
+@media screen and (max-width: 750px) {
+  .exchange-container {
+    margin: 5rem auto;
+    width: 90%;
+  }
+}

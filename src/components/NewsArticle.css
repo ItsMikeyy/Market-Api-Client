@@ -1,0 +1,48 @@
+.news-article {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.news-img {
+  width: 20%;
+  min-width: 20%;
+  height: auto;
+  object-fit: cover;
+}
+.article-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 950px) {
+  .news-article {
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .news-img {
+    width: 50%;
+  } 
+
+  .article-text {
+    width: 80%;
+    
+  }
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .article-summary {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .news-img {
+    width: 80%;
+  } 
+
+}
