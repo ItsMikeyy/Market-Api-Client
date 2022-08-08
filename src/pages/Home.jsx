@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     const getNews = async () => {
-      const response = await fetch("http://localhost:5000/news");
+      const response = await fetch("https://marketdapiata.herokuapp.com/news");
       const data = await response.json();
       const filteredList = data.feed.filter((article) => {
         return article.banner_image !== "";

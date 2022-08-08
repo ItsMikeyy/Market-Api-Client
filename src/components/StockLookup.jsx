@@ -6,7 +6,7 @@ const StockLookup = () => {
   const [error, setError] = useState("");
   const submitHandler = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/stocks", {
+    const response = await fetch("https://marketdapiata.herokuapp.com/stocks", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
