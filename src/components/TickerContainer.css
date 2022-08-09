@@ -1,7 +1,0 @@
-.ticker-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 40%;
-  align-items: center;
-}

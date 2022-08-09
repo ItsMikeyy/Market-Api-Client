@@ -8,12 +8,14 @@ const Home = () => {
   const [newsArticles, setNewsArticles] = useState([]);
   const date = new Date().toISOString();
 
+  //Getting 10 news stories that must have an image url 
   useEffect(() => {
     window.scrollTo(0, 0);
     const getNews = async () => {
       const response = await fetch("https://marketdapiata.herokuapp.com/news");
       const data = await response.json();
       const filteredList = data.feed.filter((article) => {
+        //Check for img url 
         return article.banner_image !== "";
       });
       setNewsArticles(filteredList.slice(0, 10));

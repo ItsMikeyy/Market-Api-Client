@@ -4,7 +4,9 @@ const StockLookup = () => {
   const tickerRef = useRef();
   const [ticker, setTicker] = useState({});
   const [error, setError] = useState("");
+
   const submitHandler = async (e) => {
+    //Send stock ticker to server 
     e.preventDefault();
     const response = await fetch("https://marketdapiata.herokuapp.com/stocks", {
       method: "POST",
@@ -13,6 +15,7 @@ const StockLookup = () => {
         ticker: tickerRef.current.value,
       }),
     });
+    //Error checking response
     if (!response.ok) {
       setError("Please enter a valid symbol");
     } else {
@@ -34,6 +37,7 @@ const StockLookup = () => {
         </form>
         {error && <h4 className="error">{error}</h4>}
       </div>
+      {/*Check to make sure we have data and not an error*/}
       {Object.keys(ticker).length > 1 && !error && (
         <div className="quote-container">
           <h2>{ticker.symbol}</h2>

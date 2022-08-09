@@ -6,6 +6,7 @@ const ExchangeLookup = () => {
   const [formData, setFormData] = useState({ toCurrency: "USD" , fromCurrency: "BTC"});
   const [exchangeData, setExchangeData] = useState({});
   const submitHandler = async (e) => {
+    //post to server currency data from formData state 
     e.preventDefault();
     const response = await fetch("https://marketdapiata.herokuapp.com/exchanges", {
       method: "POST",
@@ -13,10 +14,12 @@ const ExchangeLookup = () => {
       body: JSON.stringify(formData),
     });
     const data = await response.json();
+    //set response to setExchangeData state
     setExchangeData(data);
   };
 
   const changeHandler = (e) => {
+    //Getting and setting values from options 
     const name = e.target.name;
     const value = e.target.value;
 
@@ -61,6 +64,7 @@ const ExchangeLookup = () => {
           </button>
         </form>
       </div>
+      {/*If exchangeData is not undefined display results*/}
       {Object.keys(exchangeData).length !== 0 && (
         <div className="quote-container">
           <h2>
