@@ -8,7 +8,7 @@ const ExchangeLookup = () => {
   const submitHandler = async (e) => {
     //post to server currency data from formData state 
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/exchanges", {
+    const response = await fetch("https://marketdapiata.herokuapp.com/exchanges", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
