@@ -8,7 +8,7 @@ const ExchangeLookup = () => {
   const submitHandler = async (e) => {
     //post to server currency data from formData state 
     e.preventDefault();
-    const response = await fetch("https://marketdapiata.herokuapp.com/exchanges", {
+    const response = await fetch("http://localhost:5000/exchanges", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -59,7 +59,8 @@ const ExchangeLookup = () => {
             <option value="HKD">HKD,Hong Kong dollar</option>
             <option value="NZD">NZD,New Zealand dollar</option>
           </select>
-          <button className="submit-button" type="submit">
+          <p>Alpha Vantage made this feature premium so this no longer works see video for demonstration!</p>
+          <button className="submit-button inactive-button" type="button">
             Get Quote
           </button>
         </form>

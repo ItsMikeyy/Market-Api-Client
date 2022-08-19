@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     const getNews = async () => {
-      const response = await fetch("https://marketdapiata.herokuapp.com/news");
+      const response = await fetch("http://localhost:5000/news");
       const data = await response.json();
       const filteredList = data.feed.filter((article) => {
         //Check for img url 

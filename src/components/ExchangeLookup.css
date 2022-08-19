@@ -21,8 +21,18 @@
   padding: 1rem;
   font-size: 1rem;
 }
+.exchange-form > p {
+  padding: 1rem;
+}
 .exchange-img {
   width: 5%;
+}
+
+.inactive-button {
+  background-color: gray !important;
+  color: white !important;
+  border: none !important;
+  cursor: default !important;
 }
 
 @media screen and (max-width: 750px) {
